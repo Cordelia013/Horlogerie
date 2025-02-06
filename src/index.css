@@ -1,0 +1,12 @@
+/*
+====================================
+  TailwindCSS Configuration
+====================================
+*/
+
+/* Importation et initialisation de TailwindCSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
