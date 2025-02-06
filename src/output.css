@@ -19,36 +19,85 @@ body {
 
 /*
 ====================================
-  Conteneurs et Breakpoints
+Conteneurs et Breakpoints
 ====================================
 */
+
 .container {
   width: 100%;
-  max-width: 1280px;
   margin: 0 auto;
   padding: 0 1rem;
 }
 
+/* Très petits portables (< 360px) */
+@media (max-width: 359px) {
+  .container {
+    padding: 0 0.5rem;
+  }
+}
+
+/* Petit portable (360px - 413px) */
+@media (min-width: 360px) and (max-width: 413px) {
+  .container {
+    max-width: 100%;
+    padding: 0 0.75rem;
+  }
+}
+
+/* Mobile First (à partir de 414px) */
+@media (min-width: 414px) {
+  .container {
+    max-width: 414px;
+  }
+}
+
+/* Tablettes (640px - 767px) */
 @media (min-width: 640px) {
   .container {
     max-width: 640px;
+    padding: 0 2rem;
+    background-color: #000000;
   }
 }
+
+/* Tablettes paysage (768px - 1023px) */
 @media (min-width: 768px) {
   .container {
     max-width: 768px;
   }
 }
+
+/* PC portable (1024px - 1279px) */
 @media (min-width: 1024px) {
   .container {
     max-width: 1024px;
+    padding: 0 3rem;
   }
 }
+
+/* Bureau HD (1280px - 1535px) */
 @media (min-width: 1280px) {
   .container {
     max-width: 1280px;
   }
 }
+
+/* Écran large (1536px - 1919px) */
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+    padding: 0 4rem;
+  }
+}
+
+/* Écran XXXL (> 1920px) */
+@media (min-width: 1920px) {
+  .container {
+    max-width: 1800px;
+    padding: 0 5rem;
+  }
+}
+
 
 /*
 ====================================
@@ -133,11 +182,21 @@ body {
 .font-bold {
   font-weight: 700;
 }
+
+.font-light {
+  font-weight: 300;
+}
+
 .font-medium {
   font-weight: 500;
 }
-.font-light {
-  font-weight: 300;
+
+.font-normal {
+  font-weight: 400;
+}
+
+.font-semibold {
+  font-weight: 600;
 }
 
 /*
@@ -150,12 +209,170 @@ body {
 .m-2 { margin: 0.5rem; }
 .m-3 { margin: 0.75rem; }
 .m-4 { margin: 1rem; }
+
 .mx-auto { margin-left: auto; margin-right: auto; }
-.p-1 { padding: 0.25rem; }
-.p-2 { padding: 0.5rem; }
-.p-3 { padding: 0.75rem; }
-.p-4 { padding: 1rem; }
-.p-8 { padding: 2rem; }
+
+/* Padding */
+
+.p-0 {
+  padding: 0px;
+}
+
+.p-0\.5 {
+  padding: 0.125rem;
+}
+
+.p-1 {
+  padding: 0.25rem;
+}
+
+.p-1\.5 {
+  padding: 0.375rem;
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+.p-3 {
+  padding: 0.75rem;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.p-5 {
+  padding: 1.25rem;
+}
+
+.p-6 {
+  padding: 1.5rem;
+}
+
+.px-1 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.px-7 {
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+}
+
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.px-px {
+  padding-left: 1px;
+  padding-right: 1px;
+}
+
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.py-1\.5 {
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.py-2\.5 {
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+}
+
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.py-3\.5 {
+  padding-top: 0.875rem;
+  padding-bottom: 0.875rem;
+}
+
+.py-4 {
+  padding-top: 1.1rem;
+  padding-bottom: 1rem;
+}
+
+.\!pr-7 {
+  padding-right: 1.75rem !important;
+}
+
+.\!pr-9 {
+  padding-right: 2.25rem !important;
+}
+
+.pb-1 {
+  padding-bottom: 0.25rem;
+}
+
+.pb-1\.5 {
+  padding-bottom: 0.375rem;
+}
+
+.pb-2 {
+  padding-bottom: 0.5rem;
+}
+
+.pt-0 {
+  padding-top: 0px;
+}
+
+.pt-0\.5 {
+  padding-top: 0.125rem;
+}
+
+.pt-3 {
+  padding-top: 0.75rem;
+}
+
+.pt-4 {
+  padding-top: 1rem;
+}
+
+.pt-5 {
+  padding-top: 1.25rem;
+}
+
+.pt-\[9px\] {
+  padding-top: 9px;
+}
+
+.pt-px {
+  padding-top: 1px;
+}
+
 
 /* Espacements négatifs */
 .-m-4 { margin: -1rem; }
@@ -195,20 +412,6 @@ body {
 .gap-4 { gap: 1rem; }
 
 
-/*
-====================================
-  Bordures et coins arrondis
-====================================
-*/
-.rounded {
-  border-radius: 0.25rem;
-}
-.rounded-lg {
-  border-radius: 0.5rem;
-}
-.rounded-full {
-  border-radius: 9999px;
-}
 
 /*
 ====================================
@@ -226,31 +429,70 @@ body {
 
 /*
 ====================================
-Bordures 
+Gestion des bordures
 ====================================
 */
 
-/* Bordures Tailwind */
+/* Largeur des bordures */
+.border { border-width: 1px; }
+.border-0 { border-width: 0px; }
 .border-2 { border-width: 2px; }
+.border-4 { border-width: 4px; }
+.border-8 { border-width: 8px; }
+
+/* Bordures directionnelles */
+.border-t { border-top-width: 1px; }
+.border-r { border-right-width: 1px; }
+.border-b { border-bottom-width: 1px; }
+.border-l { border-left-width: 1px; }
+
+/* Styles de bordures */
+.border-solid { border-style: solid; }
 .border-dashed { border-style: dashed; }
-.border-gray-300 { border-color: #d1d5db; }
-.border-t-transparent {
-  border-top-color: transparent;
+.border-dotted { border-style: dotted; }
+.border-double { border-style: double; }
+.border-none { border-style: none; }
+
+/* Couleurs de bordures */
+.border-transparent { border-color: transparent; }
+.border-current { border-color: currentColor; }
+.border-black { border-color: #000000; }
+.border-white { border-color: #ffffff; }
+.border-gray-200 { border-color: #e5e7eb; }
+.border-blue-500 { border-color: #3b82f6; }
+.border-red-500 { border-color: #ef4444; }
+
+/* Bordures arrondies */
+.rounded-none { border-radius: 0; }
+.rounded-sm { border-radius: 0.125rem; }
+.rounded { border-radius: 0.25rem; }
+.rounded-md { border-radius: 0.375rem; }
+.rounded-lg { border-radius: 0.5rem; }
+.rounded-xl { border-radius: 0.75rem; }
+.rounded-2xl { border-radius: 1rem; }
+.rounded-3xl { border-radius: 1.5rem; }
+.rounded-full { border-radius: 9999px; }
+
+/* Bordures arrondies directionnelles */
+
+
+.rounded-t-lg {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
 }
-.border-b-blue-gray-100 {
-  --tw-border-opacity: 1;
-  border-bottom-color: rgb(207 216 220 / var(--tw-border-opacity));
+.rounded-r-lg {
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
 }
-.border-l-transparent {
-  border-left-color: transparent;
+.rounded-b-lg {
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
 }
-.border-r-transparent {
-  border-right-color: transparent;
+.rounded-l-lg {
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
 }
-.border-t-blue-gray-100 {
-  --tw-border-opacity: 1;
-  border-top-color: rgb(207 216 220 / var(--tw-border-opacity));
-}
+
 
 /* États hover/focus */
 .hover\:bg-gray-100:hover { background-color: #f3f4f6; }
@@ -278,14 +520,6 @@ Gestion des images
   height: 100%;
 }
 
-.object-center {
-  object-position: center;
-}
-
-.object-top {
-  object-position: top;
-}
-
 .aspect-square {
   aspect-ratio: 1/1;
 }
@@ -302,11 +536,82 @@ Gestion des images
   filter: blur(4px);
 }
 
-@media (max-width: 640px) {
-  .img-mobile {
-    max-width: 100vw;
-    height: auto;
-  }
+/*
+====================================
+Gestion des images et contenus
+====================================
+*/
+
+/* Object Fit */
+.object-cover {
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.object-contain {
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.object-fill {
+  -o-object-fit: fill;
+  object-fit: fill;
+}
+
+.object-scale-down {
+  -o-object-fit: scale-down;
+  object-fit: scale-down;
+}
+
+.object-none {
+  -o-object-fit: none;
+  object-fit: none;
+}
+
+/* Object Position */
+.object-center {
+  -o-object-position: center;
+  object-position: center;
+}
+
+.object-top {
+  -o-object-position: top;
+  object-position: top;
+}
+
+.object-bottom {
+  -o-object-position: bottom;
+  object-position: bottom;
+}
+
+.object-left {
+  -o-object-position: left;
+  object-position: left;
+}
+
+.object-right {
+  -o-object-position: right;
+  object-position: right;
+}
+
+.object-left-top {
+  -o-object-position: left top;
+  object-position: left top;
+}
+
+.object-right-top {
+  -o-object-position: right top;
+  object-position: right top;
+}
+
+.object-left-bottom {
+  -o-object-position: left bottom;
+  object-position: left bottom;
+}
+
+.object-right-bottom {
+  -o-object-position: right bottom;
+  object-position: right bottom;
 }
 
 /*
