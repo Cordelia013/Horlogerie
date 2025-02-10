@@ -1,5 +1,6 @@
 import { useState } from "react";
-import Carousel from "../components/carousel";
+import Carousel from "./../components/Carousel";
+
 
 // Liste des images du carrousel
 const images = [

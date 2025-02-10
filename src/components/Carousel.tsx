@@ -26,7 +26,7 @@ const faqItems: FAQItem[] = [
   },
 ];
 
-const FAQCarousel: React.FC = () => {
+const Carousel: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   // Fonction pour ouvrir/fermer une section
@@ -65,4 +65,4 @@ const FAQCarousel: React.FC = () => {
   );
 };
 
-export default FAQCarousel;
+export default Carousel;
