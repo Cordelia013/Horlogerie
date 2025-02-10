@@ -1,17 +1,17 @@
 import { motion } from "framer-motion";
 
 const CircularAnimation = () => {
-  const numbers = Array.from({ length: 11 }, (_, i) =>
+  const numbers = Array.from({ length: 6 }, (_, i) =>
     i.toString().padStart(1, "0")
   ); // Chiffres de 00 à 11
 
   // 🔧 Personnalisation facile
   const config = {
-    radius: 350, // Rayon du cercle des chiffres
+    radius: 300, // Rayon du cercle des chiffres
     spacing: 30, // Distance entre le point et le chiffre
     textOffset: 5, // Décalage supplémentaire des chiffres
     pointSize: 6, // Taille des points blancs
-    repeatDelay:1,
+    repeatDelay:12,
     rotationSpeed: 60, // 60 secondes = 1 minute
   };
 
@@ -20,7 +20,7 @@ const CircularAnimation = () => {
       {/* Conteneur tournant */}
       <motion.div
         animate={{
-          rotate:  360,
+          rotate:  [0, 120],
         }}
         transition={{
           repeat: Infinity,
@@ -28,7 +28,7 @@ const CircularAnimation = () => {
           duration: config.rotationSpeed,
           ease: "linear",
         }}
-        className="absolute -left-[800px] w-[700px] h-[787px] top-[158px] z-10"
+        className="absolute -left-[750px] w-[700px] h-[717px] top-[142px] z-10"
         style={{ transformOrigin: "center" }}
       >
         {numbers.map((number, index) => {
@@ -84,11 +84,11 @@ const CircularAnimation = () => {
 
       {/* Cercle central */}
       <div
-        className="absolute  -left-[800px] w-[700px] h-[700px] top-[200px]  border border-secondary
+        className="absolute  -left-[700px] w-[600px] h-[600px] top-[200px]  border border-secondary
        rounded-full border-dashed"
       ></div>
     </div>
-  );
+  )
 };
 
 export default CircularAnimation;

@@ -6,15 +6,11 @@ function ProductSection() {
       <CircularAnimation />
       <div className="flex justify-center item-center flex-col relative -top-96 left-[600px] ">
         <h3 className="text-[96px]">Header</h3>
-        <p className="text-base w-5/12 font-montreal">
+        <p className="text-base w-5/12 font-Monument">
           Lorem ipsum dolor sit amet consectetur. Mauris ipsum ut velit egestas
           consequat aenean. Vitae neque ipsum mi eu. Maecenas quis dignissim
           diam hendrerit. Erat nisi malesuada et pellentesque. Dui elit pharetra
-          accumsan erat condimentum dignissim amet integer. Sed lacinia
-          venenatis feugiat ipsum massa tempor viverra. Rutrum sapien feugiat
-          erat molestie donec. Tincidunt euismod arcu amet in massa vestibulum
-          pretium blandit ullamcorper. Diam id volutpat semper gravida magna
-          potenti libero magnis.
+          accumsan erat condimentum dignissim amet integer. 
         </p>
         <img
           src="/assets/clock-2.png"
