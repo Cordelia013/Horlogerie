@@ -1,0 +1,6 @@
+@font-face {
+  font-family: 'AkkordeonTRIAL-Eight';
+  src: url(./AkkordeonTRIAL-Eight.woff) format('woff'),
+       url(./AkkordeonTRIAL-Eight.woff2) format('woff2'),
+       url(./AkkordeonTRIAL-Eight.ttf) format('truetype');
+}

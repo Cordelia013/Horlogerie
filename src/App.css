@@ -1,6 +1,11 @@
 #root {
   margin: 0 auto;
   padding: 0 auto;
+max-width: 1440px;
+
 }
 
 
+body {
+  background: hsla(0, 0%, 4%, 1);
+}

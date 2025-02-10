@@ -1,0 +1,6 @@
+@font-face {
+  font-family: 'ppneuemontreal-thin';
+  src: url(./ppneuemontreal-thin.ttf) format('truetype'),
+       url(./ppneuemontreal-thin.woff) format('woff'),
+       url(./ppneuemontreal-thin.woff2) format('woff2');
+}

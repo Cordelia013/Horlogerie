@@ -1,0 +1,21 @@
+
+@font-face {
+  font-family: 'AkkordeonTRIAL-Eight';
+  src: url(./AkkordeonTRIAL-Eight.woff) format('woff'),
+       url(./AkkordeonTRIAL-Eight.woff2) format('woff2'),
+       url(./AkkordeonTRIAL-Eight.ttf) format('truetype');
+}
+
+
+@font-face {
+  font-family: 'AKKORDEON-DEMO';
+  src: url(/fonts/demo/AKKORDEON-DEMO.woff) format('woff'),
+   
+}
+
+@font-face {
+  font-family: 'ppneuemontreal-thin';
+  src: url(./ppneuemontreal-thin.ttf) format('truetype'),
+       url(./ppneuemontreal-thin.woff) format('woff'),
+       url(./ppneuemontreal-thin.woff2) format('woff2');
+}

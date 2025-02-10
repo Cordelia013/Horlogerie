@@ -11,7 +11,7 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'inter', sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -27,6 +27,7 @@ Conteneurs et Breakpoints
   width: 100%;
   margin: 0 auto;
   padding: 0 1rem;
+  font-size: 1rem; /* Taille de police par défaut (16px) */
 }
 
 /* Très petits portables (< 360px) */
@@ -123,20 +124,19 @@ Conteneurs et Breakpoints
 /* Couleurs + typo - config de base */
 
 .bg-primary {
-  background-color: #6C343D;
+  background-color: #151514;
 }
 .bg-secondary {
-  background-color: #64E2F1;
+  background-color: #3E4733;
 }
+.bg-blacki { background-color: #000; }
 
-.text-primary {
-  color: #6C343D;
-}
-.text-secondary {
-  color: #64E2F1;
+.section-color{
+  color:#D9D9D9;
 }
 
 /* Couleurs Tailwind étendues */
+
 .bg-slate-100 { background-color: #f1f5f9; }
 .bg-gray-200 { background-color: #e5e7eb; }
 .bg-red-500 { background-color: #ef4444; }
@@ -144,6 +144,15 @@ Conteneurs et Breakpoints
 .bg-emerald-400 { background-color: #34d399; }
 
 /* Couleurs de texte */
+
+.text-primary {
+  color: #fff;
+}
+.text-secondary {
+  color: #64E2F1;
+}
+
+
 .text-slate-800 { color: #1e293b; }
 .text-amber-500 { color: #f59e0b; }
 .text-purple-700 { color: #7e22ce; }
@@ -411,7 +420,9 @@ Conteneurs et Breakpoints
 .grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .gap-4 { gap: 1rem; }
 
-
+.-gap-y-80{
+  g: -20rem ;
+}
 
 /*
 ====================================
