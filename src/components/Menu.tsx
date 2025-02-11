@@ -1,7 +1,7 @@
 export default function Menu() {
   return (
     <nav className="relative mb-8 rounded-lg shadow-md">
-      <ul className="flex justify-center items-center font-normal text-sm text-gray">
+      <ul className="flex justify-center items-center font-normal text-sm text-gray rounded-lg">
         <li className="py-4 px-6 bg-secondary hover:bg-secondary_light">
           <a
             href="#hero-section"
