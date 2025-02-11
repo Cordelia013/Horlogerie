@@ -16,11 +16,11 @@ function TechnicalSection() {
 
   return (
     <div
-      className="relative w-full h-screen bg-primary flex "
+      className="relative w-full  bg-primary flex "
       id="technical-section -z-10"
     >
       {/* Zone gauche : Image sélectionnée */}
-      <div className="zoneLeft w-6/12 h-full flex items-center justify-center">
+      <div className="zoneLeft w-6/12  flex items-center justify-center">
         <img
           src={selectedImage}
           alt="Selected Watch"
@@ -29,7 +29,7 @@ function TechnicalSection() {
       </div>
 
       {/* Zone droite : Carrousel */} 
-      <div className="zoneRight w-6/12 bg-secondary flex flex-row justify-center items-end gap-2 p-1">
+      <div className="zoneRight w-6/12 bg-secondary flex flex-row justify-center items-end gap-2 p-1 z-10 2xl:h-fill">
         <Carousel />
 
         {images.map((img, index) => (
