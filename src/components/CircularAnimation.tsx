@@ -67,7 +67,7 @@ const CircularAnimation = () => {
 
               {/* 🔢 Chiffre */}
               <div
-                className="text-secondary font-normal text-8xl"
+                className="text-secondary font-normal text-8xl font-Monument"
                 style={{
                   position: "absolute",
                   left: `${config.spacing + 5}px`,

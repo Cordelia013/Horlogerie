@@ -17,7 +17,7 @@ function TechnicalSection() {
   return (
     <div
       className="relative w-full h-screen bg-primary flex "
-      id="technical-section"
+      id="technical-section -z-10"
     >
       {/* Zone gauche : Image sélectionnée */}
       <div className="zoneLeft w-6/12 h-full flex items-center justify-center">
@@ -28,7 +28,7 @@ function TechnicalSection() {
         />
       </div>
 
-      {/* Zone droite : Carrousel */}
+      {/* Zone droite : Carrousel */} 
       <div className="zoneRight w-6/12 bg-secondary flex flex-row justify-center items-end gap-2 p-1">
         <Carousel />
 
