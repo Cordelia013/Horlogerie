@@ -1,13 +1,10 @@
 export default function Menu() {
   return (
-    <nav className="relative mb-8 rounded-lg shadow-md">
-      <ul className="flex justify-center items-center font-normal text-sm text-gray rounded-lg">
-        <li className="py-4 px-6 bg-secondary hover:bg-secondary_light">
-          <a
-            href="#hero-section"
-            className="transition-colors duration-300"
-          >
-      ACCEUIL
+    <nav className="relative mb-8 rounded-lg shadow-md ">
+      <ul className="flex justify-center items-center font-normal text-sm text-gray ">
+        <li className="py-4 px-6 bg-secondary hover:bg-secondary_light rounded-l-lg ">
+          <a href="#hero-section" className="transition-colors duration-300">
+            ACCEUIL
           </a>
         </li>
         <li className="py-4 px-6 bg-secondary hover:bg-secondary_light">
@@ -19,19 +16,16 @@ export default function Menu() {
           </a>
         </li>
         <li className="py-4 px-6 bg-secondary hover:bg-secondary_light">
-          <a
-            href="#product-section"
-            className="transition-colors duration-300"
-          >
-            PRODUCT 
+          <a href="#product-section" className="transition-colors duration-300">
+            PRODUCT
           </a>
         </li>
-        <li className="py-4 px-6 bg-secondary hover:bg-secondary_light">
+        <li className="py-4 px-6 bg-secondary hover:bg-secondary_light rounded-r-lg">
           <a
             href="#technical-section"
             className="transition-colors duration-300"
           >
-            TECHNICAL 
+            TECHNICAL
           </a>
         </li>
       </ul>
