@@ -6,16 +6,19 @@ import ProductSection from "./section/ProductSection";
 import TechnicalSection from "./section/TechnicalSection";
 import FooterSection from "./section/FooterSection";
 
+
 function App() {
   return (
     <>
-      <div className=" overflow-hidden  ">
-        <HeroSection />
-        <PresentationSection />
-        <ProductSection />
-        <TechnicalSection />
+      <div className="overflow-hidden">
+       
+          <HeroSection />
+          <PresentationSection />
+          <ProductSection />
+          <TechnicalSection />
+        </div>
         <FooterSection />
-      </div>
+    
     </>
   );
 }
