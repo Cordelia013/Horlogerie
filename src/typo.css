@@ -1,8 +1,8 @@
 @font-face {
   font-family: 'PPMonumentExtended-Black-iF6702ae8733ec5';
-  src: url(/font/monument/PPMonumentExtended-Black-iF6702ae8733ec5.ttf) format('truetype'),
-       url(/font/monument/PPMonumentExtended-Black-iF6702ae8733ec5.woff) format('woff'),
-       url(/font/monument/PPMonumentExtended-Black-iF6702ae8733ec5.woff2) format('woff2');
+  src: url(/fonts/monument/PPMonumentExtended-Black-iF6702ae8733ec5.ttf) format('truetype'),
+       url(/fonts/monument/PPMonumentExtended-Black-iF6702ae8733ec5.woff) format('woff'),
+       url(/fonts/monument/PPMonumentExtended-Black-iF6702ae8733ec5.woff2) format('woff2');
 }
 
 
