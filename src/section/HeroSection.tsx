@@ -5,9 +5,14 @@ export default function HeroSection() {
     <>
       <div className="relative w-full h-screen flex items-end justify-center bg-cover bg-center">
         <video
+          style={{ zIndex: 0 }}
           className="absolute inset-0 w-full h-full object-cover"
-          src="/assets/HUBLOT - BIG BANG UNICO NESPRESSO ORIGIN.mp4" 
-          loop
+          src="/assets/HUBLOT-BIG BANG UNICO NESPRESSO ORIGIN.mp4"
+          onClick={(e) => {
+            const video = e.target as HTMLVideoElement;
+            // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+            video.paused ? video.play() : video.pause();
+          }}
           muted
           playsInline
         />
