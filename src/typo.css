@@ -1,20 +1,21 @@
 @font-face {
-  font-family: 'PPMonumentExtended-Black-iF6702ae8733ec5';
-  src: url(/fonts/monument/PPMonumentExtended-Black-iF6702ae8733ec5.ttf) format('truetype'),
-       url(/fonts/monument/PPMonumentExtended-Black-iF6702ae8733ec5.woff) format('woff'),
-       url(/fonts/monument/PPMonumentExtended-Black-iF6702ae8733ec5.woff2) format('woff2');
-}
-
-
-@font-face {
-  font-family: 'AKKORDEON-DEMO';
-  src: url(/fonts/demo/AKKORDEON-DEMO.woff) format('woff'),
-   
+  font-family: "PPMonumentExtended-Black-iF6702ae8733ec5";
+  src: url(/fonts/monument/PPMonumentExtended-Black-iF6702ae8733ec5.woff)
+      format("woff"),
+    url(/fonts/monument/PPMonumentExtended-Black-iF6702ae8733ec5.woff2)
+      format("woff2"),
+    url(/fonts/monument/PPMonumentExtended-Black-iF6702ae8733ec5.ttf)
+      format("truetype");
 }
 
 @font-face {
-  font-family: 'ppneuemontreal-thin';
-  src: url(/fonts/neueMontreal/ppneuemontreal-thin.ttf) format('truetype'),
-       url(/fonts/neueMontreal/ppneuemontreal-thin.woff) format('woff'),
-       url(/fonts/neueMontreal/ppneuemontreal-thin.woff2) format('woff2');
+  font-family: "AKKORDEON-DEMO";
+  src: url(/fonts/demo/AKKORDEON-DEMO.woff) format("woff");
+}
+
+@font-face {
+  font-family: "ppneuemontreal-thin";
+  src: url(/fonts/neueMontreal/ppneuemontreal-thin.woff) format("woff"),
+    url(/fonts/neueMontreal/ppneuemontreal-thin.woff2) format("woff2"),
+    url(/fonts/neueMontreal/ppneuemontreal-thin.ttf) format("truetype");
 }
