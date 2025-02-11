@@ -11,7 +11,7 @@ const BlurBackground = () => {
     width: "656px",
     height: "656px",
     transform: "translate(-50%, -50%)",
-    backdropFilter: "blur(60px)",
+    // backdropFilter: "blur(60px)",
     WebkitBackdropFilter: "blur(20px)",
     background:
       "radial-gradient(circle, rgba(62, 71, 51, 0.6) 0%, rgba(62, 71, 51, 0) 80%)",
