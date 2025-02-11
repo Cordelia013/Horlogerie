@@ -5,13 +5,13 @@ function FooterSection() {
     <div className="w-full h-[26rem] relative bg-primary flex flex-col text-gray font-Akkordeon  z-20">
       <div className="flex justify-between flex-row mx-4 pt-10 mt-[117px]  font-montreal bottom-0">
         <div className="flex text-base gap-8">
-          <div className="">Lorem Ipsum</div>
-          <div className="">Lorem Ipsum</div>
+          <div className="">ACCEUIL </div>
+          <div className="">PRESENTATION </div>
         </div>
 
         <div className="flex text-base gap-8">
-          <div className="">Lorem Ipsum</div>
-          <div className="">Lorem Ipsum</div>
+          <div className="">PRODUCT</div>
+          <div className="">TECHNICAL</div>
         </div>
       </div>
 
