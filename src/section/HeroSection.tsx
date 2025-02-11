@@ -47,7 +47,7 @@ const HeroSection: React.FC = () => {
         src="/assets/HUBLOT-BIG_BANG_UNICO_NESPRESSO_ORIGIN.mp4"
         onClick={toggleVideo}
         onLoadedData={handleLoadedData} // Utilise isLoading en mettant à jour l'état
-        muted
+        // muted
         playsInline
         autoPlay
       />
