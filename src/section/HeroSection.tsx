@@ -1,21 +1,56 @@
+import React, { useState, useRef } from "react";
 import Menu from "../components/Menu";
 
-export default function HeroSection() {
+const HeroSection: React.FC = () => {
+  const [isPlaying, setIsPlaying] = useState(true); // État pour contrôler la lecture de la vidéo
+  const [isLoading, setIsLoading] = useState(true); // État pour contrôler le chargement de la vidéo
+  const videoRef = useRef<HTMLVideoElement | null>(null); // Référence à la vidéo
+
+  const handleLoadedData = () => {
+    setIsLoading(false); // La vidéo est chargée
+  };
+
+  const toggleVideo = (e: React.MouseEvent<HTMLVideoElement>) => {
+    const video = e.currentTarget as HTMLVideoElement;
+    if (isPlaying) {
+      video.pause();
+    } else {
+      video.play();
+    }
+    setIsPlaying(!isPlaying); // Inverse l'état
+  };
+
+  const togglePlayPause = () => {
+    if (videoRef.current) {
+      if (isPlaying) {
+        videoRef.current.pause();
+      } else {
+        videoRef.current.play();
+      }
+      setIsPlaying(!isPlaying); // Inverse l'état
+    }
+  };
+
   return (
     <>
       <div className="relative w-full h-screen flex items-end justify-center bg-cover bg-center">
         <video
+          ref={videoRef}
           style={{ zIndex: 0 }}
           className="absolute inset-0 w-full h-full object-cover"
-          src="/assets/HUBLOT-BIG BANG UNICO NESPRESSO ORIGIN.mp4"
-          onClick={(e) => {
-            const video = e.target as HTMLVideoElement;
-            // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-            video.paused ? video.play() : video.pause();
-          }}
-          muted
+          src="/assets/HUBLOT-BIG_BANG_UNICO_NESPRESSO_ORIGIN.mp4"
+          onClick={toggleVideo}
+          // muted
           playsInline
+          autoPlay
         />
+
+        <button
+          onClick={togglePlayPause}
+          className="absolute bottom-4 left-4 bg-white bg-opacity-80 text-secondary p-2 rounded z-10 shadow-md"
+        >
+          {isPlaying ? "Mettre en pause" : "Jouer"}
+        </button>
 
         <div className="container mx-auto flex items-center justify-center">
           {" "}
@@ -28,4 +63,6 @@ export default function HeroSection() {
       </div>
     </>
   );
-}
+};
+
+export default HeroSection;
