@@ -426,7 +426,7 @@ Conteneurs et Breakpoints
 .gap-4 { gap: 1rem; }
 
 .-gap-y-80{
-  g: -20rem ;
+  gap:-20rem;
 }
 
 /*
