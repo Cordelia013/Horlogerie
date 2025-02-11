@@ -1,26 +1,27 @@
 import { useState } from "react";
-import { CSSProperties } from "react"; // ✅ Import nécessaire
+import { CSSProperties } from "react"; // Import nécessaire
 
 const BlurBackground = () => {
   const [isBlurred] = useState(true);
 
   const blurStyle: CSSProperties = {
-    // ✅ Type ajouté
-    position: "fixed",
-    top: 0,
-    left: 0,
-    width: "100%",
-    height: "100%",
-    backdropFilter: "blur(5px)",
-    WebkitBackdropFilter: "blur(5px)",
-    background: "rgba(62, 71, 51, 0.5)",
-    zIndex: -50,
-    opacity: isBlurred ? 1 : 0,
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    width: "656px",
+    height: "656px",
+    transform: "translate(-50%, -50%)",
+    backdropFilter: "blur(60px)",
+    WebkitBackdropFilter: "blur(20px)",
+    background:
+      "radial-gradient(circle, rgba(62, 71, 51, 0.6) 0%, rgba(62, 71, 51, 0) 80%)",
+    zIndex: -10,
+    opacity: isBlurred ? 0.7 : 0,
     visibility: isBlurred ? "visible" : "hidden",
     transition: "opacity 0.3s ease-in-out, visibility 0.3s ease-in-out",
-    display: "flex", // Ajouté pour centrer le contenu
-    justifyContent: "center", // Ajouté pour centrer le contenu
-    alignItems: "center", // Ajouté pour centrer le contenu
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
   };
 
   return (
@@ -62,7 +63,7 @@ const BlurBackground = () => {
                   result="shape"
                 />
                 <feGaussianBlur
-                  stdDeviation="97.55"
+                  stdDeviation="15"
                   result="effect1_foregroundBlur_4103_2"
                 />
               </filter>
