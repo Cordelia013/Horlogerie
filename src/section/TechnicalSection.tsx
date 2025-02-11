@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Carousel from "./../components/Carousel";
 
-
 // Liste des images du carrousel
 const images = [
   "/assets/image-01.png",
@@ -16,7 +15,10 @@ function TechnicalSection() {
   const [selectedImage, setSelectedImage] = useState(images[0]);
 
   return (
-    <div className="relative w-full h-screen bg-primary flex ">
+    <div
+      className="relative w-full h-screen bg-primary flex "
+      id="technical-section"
+    >
       {/* Zone gauche : Image sélectionnée */}
       <div className="zoneLeft w-6/12 h-full flex items-center justify-center">
         <img
@@ -25,11 +27,10 @@ function TechnicalSection() {
           className="h-%] w-full object-contain"
         />
       </div>
-     
 
       {/* Zone droite : Carrousel */}
       <div className="zoneRight w-6/12 bg-secondary flex flex-row justify-center items-end gap-2 p-1">
-         <Carousel />
+        <Carousel />
 
         {images.map((img, index) => (
           <img
