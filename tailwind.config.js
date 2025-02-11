@@ -12,6 +12,7 @@ export default {
     },
     colors: {
       primary: '#151514',
+      secondary_light: '#5a664b',
       secondary: '#3E4733',
       slate: '#f1f5f9',
       gray: '#e5e7eb',

@@ -129,6 +129,10 @@ Conteneurs et Breakpoints
 .bg-secondary {
   background-color: #3E4733;
 }
+
+.bg-secondary-light{
+  background-color: #5a664b;
+}
 .bg-blacki { background-color: #000; }
 
 .section-color{
