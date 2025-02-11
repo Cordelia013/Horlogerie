@@ -7,7 +7,7 @@ export default function Menu() {
             href="#hero-section"
             className="transition-colors duration-300"
           >
-            HERO SECTION
+      ACCEUIL
           </a>
         </li>
         <li className="py-4 px-6 bg-secondary hover:bg-secondary_light">
@@ -15,7 +15,7 @@ export default function Menu() {
             href="#presentation-section"
             className="transition-colors duration-300"
           >
-            PRESENTATION SECTION
+            PRESENTATION
           </a>
         </li>
         <li className="py-4 px-6 bg-secondary hover:bg-secondary_light">
@@ -23,7 +23,7 @@ export default function Menu() {
             href="#product-section"
             className="transition-colors duration-300"
           >
-            PRODUCT SECTION
+            PRODUCT 
           </a>
         </li>
         <li className="py-4 px-6 bg-secondary hover:bg-secondary_light">
@@ -31,7 +31,7 @@ export default function Menu() {
             href="#technical-section"
             className="transition-colors duration-300"
           >
-            TECHNICAL SECTION
+            TECHNICAL 
           </a>
         </li>
       </ul>
