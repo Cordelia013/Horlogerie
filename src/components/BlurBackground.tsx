@@ -53,9 +53,9 @@ const BlurBackground = () => {
                 width="1057.8"
                 height="1003.84"
                 filterUnits="userSpaceOnUse"
-                color-interpolation-filters="sRGB"
+                colorInterpolationFilters="sRGB"
               >
-                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feFlood floodOpacity="0" result="BackgroundImageFix" />
                 <feBlend
                   mode="normal"
                   in="SourceGraphic"
@@ -75,9 +75,9 @@ const BlurBackground = () => {
                 y2="808.642"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#3E4733" />
-                <stop offset="0.51" stop-color="#3CA367" />
-                <stop offset="1" stop-color="#3E4733" />
+                <stop stopColor="#3E4733" />
+                <stop offset="0.51" stopColor="#3CA367" />
+                <stop offset="1" stopColor="#3E4733" />
               </linearGradient>
             </defs>
           </svg>

@@ -34,7 +34,7 @@ const HeroSection: React.FC = () => {
   return (
     <div
       id="hero-section"
-      className="relative w-full h-screen flex items-end justify-center bg-cover bg-center"
+      className="relative w-screen h-screen flex items-end justify-center bg-cover bg-center"
     >
       {/* Indicateur de chargement */}
       {isLoading && (
