@@ -6,7 +6,7 @@ const BlurBackground = () => {
 
   const blurStyle: CSSProperties = {
     position: "absolute",
-    top: "50%",
+    top: window.innerWidth > 1280 ? '40%' : '50%' ,
     left: "50%",
     width: "656px",
     height: "656px",

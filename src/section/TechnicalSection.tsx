@@ -17,14 +17,14 @@ function TechnicalSection() {
   return (
     <div
       className="relative w-full  bg-primary flex "
-      id="technical-section -z-10"
+      id="technical-section -z-10 xl:-z-20"
     >
       {/* Zone gauche : Image sélectionnée */}
       <div className="zoneLeft w-6/12  flex items-center justify-center">
         <img
           src={selectedImage}
           alt="Selected Watch"
-          className="h-%] w-full object-contain"
+          className=" w-full object-contain"
         />
       </div>
 

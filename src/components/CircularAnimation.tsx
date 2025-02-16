@@ -7,7 +7,7 @@ const CircularAnimation = () => {
 
   // 🔧 Personnalisation facile
   const config = {
-    radius: 300, // Rayon du cercle des chiffres
+    radius: window.innerWidth > 1280 ? 400 : 300, // Rayon du cercle des chiffres
     spacing: 30, // Distance entre le point et le chiffre
     textOffset: 5, // Décalage supplémentaire des chiffres
     pointSize: 6, // Taille des points blancs
@@ -16,11 +16,11 @@ const CircularAnimation = () => {
   };
 
   return (
-    <div className="relative w-[600px] h-[600px] mx-auto ">
+    <div className="relative w-[600px]  h-[800px]  mx-auto xl:-bottom-44">
       {/* Conteneur tournant */}
       <motion.div
         animate={{
-          rotate:  [0, 120],
+          rotate: [0, 120],
         }}
         transition={{
           repeat: Infinity,
@@ -28,7 +28,7 @@ const CircularAnimation = () => {
           duration: config.rotationSpeed,
           ease: "linear",
         }}
-        className="absolute -left-[750px] w-[700px] h-[717px] top-[142px] z-10"
+        className="absolute -left-[750px] xl:-left-[83.25rem] w-[700px] h-[717px] top-[142px]  z-10"
         style={{ transformOrigin: "center" }}
       >
         {numbers.map((number, index) => {
@@ -84,11 +84,11 @@ const CircularAnimation = () => {
 
       {/* Cercle central */}
       <div
-        className="absolute  -left-[700px] w-[600px] h-[600px] top-[200px]  border border-secondary
+        className="absolute  -left-[700px] xl:-left-[86.4rem] w-[600px] xl:w-[800px] h-[600px]  xl:h-[800px] top-[200px]  xl:top-[100px] border border-secondary
        rounded-full border-dashed"
       ></div>
     </div>
-  )
+  );
 };
 
 export default CircularAnimation;

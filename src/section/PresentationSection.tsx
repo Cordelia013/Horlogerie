@@ -3,7 +3,7 @@ import BlurBackground from "../components/BlurBackground";
 function PresentationSection() {
   return (
     <div
-      className="relative w-screen h-screen bg-primary text-gray font-Akkordeon font-medium tracking-[10px] text-[200px] xl:text-[270px] z-20 pb-[10%]"
+      className="relative w-screen h-screen bg-primary text-gray font-Akkordeon font-medium tracking-[10px] text-[200px] xl:text-[270px] z-20 xl:z-30 pb-[10%]"
       id="presentation-section"
     >
       <div className="flex justify-end mr-[135px] xl:relative xl:top-14 tracking-[10px]">NEW</div>
