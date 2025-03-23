@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import Menu from "../components/Menu";
-import { FaPause, FaPlay, FaVolumeMute, FaVolumeUp } from "react-icons/fa"; // Assurez-vous d'avoir installé react-icons
+import { FaPause, FaPlay, FaVolumeMute, FaVolumeUp } from "react-icons/fa"; 
 
 const HeroSection: React.FC = () => {
   const [isPlaying, setIsPlaying] = useState(true); // Contrôle de la lecture de la vidéo
