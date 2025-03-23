@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import Menu from "../components/Menu";
-import { FaVolumeMute, FaVolumeUp } from "react-icons/fa"; // Assurez-vous d'avoir installé react-icons
+import { FaPause, FaPlay, FaVolumeMute, FaVolumeUp } from "react-icons/fa"; // Assurez-vous d'avoir installé react-icons
 
 const HeroSection: React.FC = () => {
   const [isPlaying, setIsPlaying] = useState(true); // Contrôle de la lecture de la vidéo
@@ -53,19 +53,18 @@ const HeroSection: React.FC = () => {
         playsInline
         autoPlay
       />
-
       {/* Bouton de lecture/pause en bas à gauche */}
       <button
         onClick={togglePlayPause}
-        className="absolute bottom-4 left-4 bg-white bg-opacity-80 text-secondary p-2 rounded z-10 shadow-md"
+        className="absolute bottom-4 left-4 bg-white bg-opacity-80 text-secondary p-2 rounded z-10 shadow-md md:p-4 md:text-lg"
       >
-        {isPlaying ? "Mettre en pause" : "Jouer"}
+        {isPlaying ? <FaPause size={20} /> : <FaPlay size={20} />}
       </button>
 
       {/* Bouton de contrôle du son en bas à droite */}
       <button
         onClick={toggleMute}
-        className="absolute bottom-4 right-4 bg-white bg-opacity-80 text-secondary p-2 rounded z-10 shadow-md"
+        className="absolute bottom-4 right-4 bg-white bg-opacity-80 text-secondary p-2 rounded z-10 shadow-md md:p-4 md:text-lg"
       >
         {isMuted ? <FaVolumeMute size={20} /> : <FaVolumeUp size={20} />}
       </button>
