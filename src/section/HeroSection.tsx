@@ -72,7 +72,7 @@ const HeroSection: React.FC = () => {
 
       <div className="container mx-auto flex items-center justify-center">
         <div className="absolute inset-0 pointer-events-none">
-          <div className="border border-black mx-[135px] mt-[136px] mb-[137px] w-[calc(100%-270px)] h-[calc(100%-273px)]"></div>
+          <div className="border border-black mx-[10vw] mt-[10vh] mb-[10vh] w-[calc(100%-20vw)] h-[calc(100%-20vh)]"></div>
         </div>
         <Menu />
       </div>
