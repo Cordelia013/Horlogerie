@@ -35,7 +35,7 @@ const Carousel: React.FC = () => {
   };
 
   return (
-    <div className="max-w-lg mx-auto p-6 text-gray absolute top-36  ">
+    <div className="max-w-2xl mx-auto p-6 text-gray absolute top-36  ">
       {faqItems.map((item, index) => (
         <div key={index} className="border-b border-gray-700 py-4">
           {/* Titre (cliquable) */}

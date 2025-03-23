@@ -16,20 +16,20 @@ function TechnicalSection() {
 
   return (
     <div
-      className="relative w-full  bg-primary flex "
+      className="relative w-full h-auto bg-primary flex "
       id="technical-section -z-10 xl:-z-20"
     >
       {/* Zone gauche : Image sélectionnée */}
-      <div className="zoneLeft w-6/12  flex items-center justify-center">
+      <div className="zoneLeft w-6/12 h-[100vh]  flex items-center justify-center">
         <img
           src={selectedImage}
           alt="Selected Watch"
-          className=" w-full object-contain"
+          className=" w-full h-full"
         />
       </div>
 
       {/* Zone droite : Carrousel */} 
-      <div className="zoneRight w-6/12 bg-secondary flex flex-row justify-center items-end gap-2 p-1 z-10 2xl:h-fill">
+      <div className="zoneRight w-6/12 bg-secondary flex flex-row justify-center items-end gap-2 px-7 z-10 2xl:h-fill">
         <Carousel />
 
         {images.map((img, index) => (
@@ -37,7 +37,7 @@ function TechnicalSection() {
             key={index}
             src={img}
             alt={`watch-${index}`}
-            className={`w-1/6 h-[140px] object-cover cursor-pointer transition-opacity duration-300 
+            className={`w-1/6  object-cover cursor-pointer transition-opacity duration-300 
               ${selectedImage === img ? "opacity-100" : "opacity-35"}`}
             onClick={() => setSelectedImage(img)}
           />

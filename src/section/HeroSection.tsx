@@ -52,6 +52,8 @@ const HeroSection: React.FC = () => {
         muted={isMuted} // Contrôle du son selon l'état
         playsInline
         autoPlay
+        width="100vw"
+       
       />
       {/* Bouton de lecture/pause en bas à gauche */}
       <button
