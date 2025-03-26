@@ -28,7 +28,7 @@ const CircularAnimation = () => {
           duration: config.rotationSpeed,
           ease: "linear",
         }}
-        className="absolute -left-[750px] xl:-left-[83.25rem] w-[700px] h-[717px] top-[142px]  z-10"
+        className="absolute -left-[750px]  w-[700px] h-[717px] top-[142px]  z-10"
         style={{ transformOrigin: "center" }}
       >
         {numbers.map((number, index) => {
@@ -84,7 +84,7 @@ const CircularAnimation = () => {
 
       {/* Cercle central */}
       <div
-        className="absolute  -left-[700px] xl:-left-[86.4rem] w-[600px] xl:w-[800px] h-[600px]  xl:h-[800px] top-[200px]  xl:top-[100px] border border-secondary
+        className="absolute  -left-[55.5vw] w-[600px] xl:w-[800px] h-[600px]  xl:h-[800px] top-[200px]  xl:top-[100px] border border-secondary
        rounded-full border-dashed"
       ></div>
     </div>
