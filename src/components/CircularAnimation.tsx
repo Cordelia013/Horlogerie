@@ -26,7 +26,7 @@ const circleCenterX = circleLeft + circleDiameter / 2;
     <div className="flex justify-start items-center w-screnn  h-screen mx-auto ">
    {/* Cercle central */}
    <div
-        className="absolute   w-[745px]  h-[745px]   top-[205px]  -left-44 border border-secondary
+        className="absolute   w-[545px]  h-[650px]   top-[650px]  -left-44 border border-secondary
        rounded-full border-dashed" 
       
       > 
