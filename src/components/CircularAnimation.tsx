@@ -7,30 +7,48 @@ const CircularAnimation = () => {
 
   // 🔧 Personnalisation facile
   const config = {
-    radius: window.innerWidth > 1280 ? 400 : 300, // Rayon du cercle des chiffres
+    radius: window.innerHeight * 0.4, // Rayon du cercle des chiffres
     spacing: 30, // Distance entre le point et le chiffre
     textOffset: 5, // Décalage supplémentaire des chiffres
     pointSize: 6, // Taille des points blancs
     repeatDelay:12,
     rotationSpeed: 60, // 60 secondes = 1 minute
   };
+// Calcul des dimensions et du centre du cercle
+const circleTop = 0; // offset top du cercle
+const circleLeft = 1; // offset left du cercle
+const circleDiameter = window.innerHeight * 0.8; // 80vh en pixels
 
+const circleCenterY = circleTop + circleDiameter / 2;
+const circleCenterX = circleLeft + circleDiameter / 2;
+ 
   return (
-    <div className="relative w-[600px]  h-[800px]  mx-auto xl:-bottom-44">
+    <div className="flex justify-start items-center w-screnn  h-screen mx-auto ">
+   {/* Cercle central */}
+   <div
+        className="absolute   w-[745px]  h-[745px]   top-[205px]  -left-44 border border-secondary
+       rounded-full border-dashed" 
+      
+      > 
+
       {/* Conteneur tournant */}
       <motion.div
-        animate={{
-          rotate: [0, 120],
-        }}
-        transition={{
-          repeat: Infinity,
-          repeatDelay: config.repeatDelay,
-          duration: config.rotationSpeed,
-          ease: "linear",
-        }}
-        className="absolute -left-[750px]  w-[700px] h-[717px] top-[142px]  z-10"
-        style={{ transformOrigin: "center" }}
-      >
+  animate={{
+    rotate: [0, 120],
+  }}
+  transition={{
+    repeat: Infinity,
+    repeatDelay: config.repeatDelay,
+    duration: config.rotationSpeed,
+    ease: "linear",
+  }}
+  className="absolute z-10"
+  style={{
+    transformOrigin: "center",
+    top: `${circleCenterY}px`,
+    left: `${circleCenterX}px`,
+  }}
+>
         {numbers.map((number, index) => {
           const angle = 360 * (index / numbers.length) - 90; // Positionne "00" en haut
           const radian = (angle * Math.PI) / 180;
@@ -82,11 +100,10 @@ const CircularAnimation = () => {
         })}
       </motion.div>
 
-      {/* Cercle central */}
-      <div
-        className="absolute  -left-[55.5vw] w-[600px] xl:w-[800px] h-[600px]  xl:h-[800px] top-[200px]  xl:top-[100px] border border-secondary
-       rounded-full border-dashed"
-      ></div>
+   
+      
+      
+      </div>
     </div>
   );
 };

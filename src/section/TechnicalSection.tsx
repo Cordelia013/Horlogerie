@@ -16,7 +16,7 @@ function TechnicalSection() {
 
   return (
     <div
-      className="relative w-full h-[100vh] bg-primary flex "
+      className="relative w-screen h-[100vh] bg-primary flex "
       id="technical-section  "
     >
       {/* Zone gauche : Image sélectionnée */}

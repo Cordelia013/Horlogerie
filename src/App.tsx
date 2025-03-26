@@ -11,14 +11,14 @@ function App() {
   return (
     <>
       <div className="overflow-hidden">
-              </div>
+         
           <HeroSection />
           <PresentationSection />
           <ProductSection />
           <TechnicalSection />
      
         <FooterSection />
-
+     </div>
     </>
   );
 }
