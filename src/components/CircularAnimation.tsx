@@ -1,13 +1,13 @@
 import { motion } from "framer-motion";
 
 const CircularAnimation = () => {
-  const numbers = Array.from({ length: 6 }, (_, i) =>
+  const numbers = Array.from({ length: 9 }, (_, i) =>
     i.toString().padStart(1, "0")
   ); // Chiffres de 00 à 11
 
   // 🔧 Personnalisation facile
   const config = {
-    radius: window.innerHeight * 0.4, // Rayon du cercle des chiffres
+    radius: window.innerHeight * 0.35, // Rayon du cercle des chiffres
     spacing: 30, // Distance entre le point et le chiffre
     textOffset: 5, // Décalage supplémentaire des chiffres
     pointSize: 6, // Taille des points blancs
@@ -15,8 +15,8 @@ const CircularAnimation = () => {
     rotationSpeed: 60, // 60 secondes = 1 minute
   };
 // Calcul des dimensions et du centre du cercle
-const circleTop = -5; // offset top du cercle
-const circleLeft = 1; // offset left du cercle
+const circleTop = -50; // offset top du cercle
+const circleLeft = -50; // offset left du cercle
 const circleDiameter = window.innerHeight * 0.8; // 80vh en pixels
 
 const circleCenterY = circleTop + circleDiameter / 2;
@@ -26,7 +26,7 @@ const circleCenterX = circleLeft + circleDiameter / 2;
     <div className="flex justify-start items-center w-screnn  h-screen mx-auto ">
    {/* Cercle central */}
    <div
-        className="absolute   w-[545px]  h-[650px]   top-[650px]  -left-44 border border-secondary
+        className="absolute   w-[650px]  h-[650px]   top-[205px]  -left-64 border border-secondary
        rounded-full border-dashed" 
       
       > 
