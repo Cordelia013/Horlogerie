@@ -15,7 +15,7 @@ const CircularAnimation = () => {
     rotationSpeed: 60, // 60 secondes = 1 minute
   };
 // Calcul des dimensions et du centre du cercle
-const circleTop = 0; // offset top du cercle
+const circleTop = -5; // offset top du cercle
 const circleLeft = 1; // offset left du cercle
 const circleDiameter = window.innerHeight * 0.8; // 80vh en pixels
 
