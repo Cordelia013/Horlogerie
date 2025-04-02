@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 
 const CircularAnimation = () => {
-  const [dimensions, setDimensions] = useState({
+  const [_dimensions, setDimensions] = useState({
     width: window.innerWidth,
     height: window.innerHeight
   });
@@ -10,7 +10,7 @@ const CircularAnimation = () => {
 
   const numbers = Array.from({ length: 9 }, (_, i) =>
     i.toString().padStart(1, "0")
-  ); // Chiffres de 0 à 8
+  );
 
   useEffect(() => {
     const handleResize = () => {
@@ -26,21 +26,17 @@ const CircularAnimation = () => {
 
   // 🔧 Personnalisation facile
   const config = {
-    fixedDistance: 10, // Distance fixe entre le cercle et les chiffres
-    spacing: 30, // Distance entre le point et le chiffre
-    textOffset: 5, // Décalage supplémentaire des chiffres
-    pointSize: 6, // Taille des points blancs
-    repeatDelay: 0,
-    rotationSpeed: 1, // 1 seconde par rotation
+    fixedDistance: 10,
+    spacing: 30,
+    pointSize: 6,
+    rotationSpeed: 1,
   };
 
-  // Calcul des dimensions et du centre du cercle
-  const circleTop = -30; // offset top du cercle
-  const circleLeft = -50; // offset left du cercle
-  const circleDiameter = 530; // Diamètre augmenté du cercle -20 pour que les point blach soit sur le cercle
-  const circleRadius = circleDiameter / 2; // Rayon du cercle
+  // Calcul des dimensions du cercle
+  const circleDiameter = 530;
+  const circleRadius = circleDiameter / 2;
 
-  // Rayon pour positionner les chiffres (rayon du cercle + distance fixe)
+  // Rayon pour positionner les chiffres
   const totalRadius = circleRadius + config.fixedDistance;
  
   return (
@@ -51,35 +47,32 @@ const CircularAnimation = () => {
       > 
         {/* Conteneur tournant */}
         <motion.div
-  animate={{
-    rotate: [0, 360], // Rotation complète
-  }}
-  transition={{
-    repeat: Infinity,
-    duration: 60, // 60 secondes pour un tour complet
-    ease: (t) => {
-      // Crée 60 pas discrets avec un léger rebond
-      const step = Math.floor(t * 60) / 60;
-      return step + Math.sin(step * Math.PI * 2) * 0.005;
-    },
-    times: [0, 1],
-    repeatType: "loop",
-  
-  }}
-  className="absolute z-10"
-  style={{
-    transformOrigin: "center",
-    width: "100%",
-    height: "100%",
-    top: 0,
-    left: 0,
-  }}
->
+          animate={{
+            rotate: [0, 360],
+          }}
+          transition={{
+            repeat: Infinity,
+            duration: 60,
+            ease: (t) => {
+              const step = Math.floor(t * 60) / 60;
+              return step + Math.sin(step * Math.PI * 2) * 0.005;
+            },
+            times: [0, 1],
+            repeatType: "loop",
+          }}
+          className="absolute z-10"
+          style={{
+            transformOrigin: "center",
+            width: "100%",
+            height: "100%",
+            top: 0,
+            left: 0,
+          }}
+        >
           {numbers.map((number, index) => {
-            const angle = 360 * (index / numbers.length) - 90; // Positionne "0" en haut
+            const angle = 360 * (index / numbers.length) - 90;
             const radian = (angle * Math.PI) / 180;
 
-            // 📍 Position des éléments avec distance fixe par rapport au cercle
             const dotPos = {
               x: Math.cos(radian) * totalRadius,
               y: Math.sin(radian) * totalRadius,
@@ -95,7 +88,7 @@ const CircularAnimation = () => {
                   transform: `translate(-50%, -50%) rotate(${angle}deg)`,
                 }}
               >
-                {/* 🟢 Point blanc */}
+                {/* Point blanc */}
                 <div
                   style={{
                     position: "absolute",
@@ -109,7 +102,7 @@ const CircularAnimation = () => {
                   }}
                 />
 
-                {/* 🔢 Chiffre */}
+                {/* Chiffre */}
                 <div
                   className="text-secondary font-normal text-8xl font-Monument"
                   style={{
