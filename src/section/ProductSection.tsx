@@ -7,7 +7,7 @@ function ProductSection() {
       id="product-section"
     >
       <CircularAnimation />
-       <div className="w-full flex justify-center item-center flex-col relative left-[50%] ">
+       <div className="w-full flex justify-center item-center flex-col relative left-[0%] ">
         
         <h3 className="text-[15vh]  ">Header</h3>
         <p className="text-base w-5/12  font-montrea ">
@@ -19,7 +19,7 @@ function ProductSection() {
         <img
           src="/assets/clock-2.png"
           alt="image clock"
-          className=" w-[30vw] h-[30vh] absolute left-96 top-[35vh] pt-8 "
+          className="  width-[500px] height-[500px] absolute left-96 top-[35vh] pt-8 "
         />
       </div> 
     </div>

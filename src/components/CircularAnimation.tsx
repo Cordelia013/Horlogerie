@@ -31,7 +31,7 @@ const CircularAnimation = () => {
   const { width, height } = useWindowDimensions();
   
   // Calcul des dimensions dynamiques
-  const circleSize = Math.min(width * 0.6 , height * 0.8 );
+  const circleSize = Math.min(width * 0.8 , height * 0.8 );
   const circlePosition = {
     top: `${height * 0.15}px`,
     left: `${(width - circleSize) / 2}px`, // Centrer horizontalement
@@ -122,7 +122,7 @@ const CircularAnimation = () => {
 
                 {/* Chiffre */}
                 <div
-                  className="text-secondary font-normal text-7xl font-Monument"
+                  className="text-secondary font-normal text-8xl font-Monument"
                   style={{
                     position: "absolute",
                     left: `${config.spacing + 5}px`,

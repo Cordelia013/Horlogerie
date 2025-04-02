@@ -30,14 +30,14 @@ function PresentationSection() {
      
     </div>
     <div
-      className="relative w-full h-full  text-gray font-Akkordeon font-medium tracking-[10px] text-[200px] -z-99 "
+      className="relative w-full h-[80vh]  text-gray font-Akkordeon font-medium tracking-[10px] text-[200px] -z-99 "
       id="product-section"
     >
       <CircularAnimation />
-       <div className="w-full flex justify-center item-center flex-col relative left-[50%] ">
+       <div className="w-full flex justify-center item-center flex-col relative left-[40%] -top-[30%]">
         
         <h3 className="text-[15vh]  ">Header</h3>
-        <p className="text-base w-5/12  font-montrea ">
+        <p className="text-base w-[600px]  font-montreal  " >
           Lorem ipsum dolor sit amet consectetur. Mauris ipsum ut velit egestas
           consequat aenean. Vitae neque ipsum mi eu. Maecenas quis dignissim
           diam hendrerit. Erat nisi malesuada et pellentesque. Dui elit pharetra
@@ -46,7 +46,12 @@ function PresentationSection() {
         <img
           src="/assets/clock-2.png"
           alt="image clock"
-          className=" w-[30vw] h-[30vh] absolute left-96 top-[35vh] pt-8 "
+          className=" absolute left-[9vw] top-[49vh] pt-8 "
+          style={{
+            width: "50vw",
+            height: "40vh",
+            objectFit: "contain",
+          }}
         />
       </div> 
     </div>
