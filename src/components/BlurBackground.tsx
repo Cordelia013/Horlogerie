@@ -15,7 +15,7 @@ const BlurBackground = () => {
     backdropFilter: "blur(1px)",
     WebkitBackdropFilter: "blur(10px)",
     background:
-      "radial-gradient(circle, rgba(62, 71, 51, 0.6) 0%, rgba(62, 71, 51, 0) 80%)",
+      "radial-gradient(circle, rgba(62, 71, 51, 0.6) 0%, rgba(62, 71, 51, 0) 40%)",
     zIndex: -10,
     opacity: isBlurred ? 0.7 : 0,
     visibility: isBlurred ? "visible" : "hidden",

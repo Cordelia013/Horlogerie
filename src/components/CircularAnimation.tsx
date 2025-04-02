@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const CircularAnimation = () => {
   const containerRef = useRef(null);
-  const numbers = Array.from({ length: 9 }, (_, i) =>
+  const numbers = Array.from({ length: 8 }, (_, i) =>
     i.toString().padStart(1, "0")
   );
 
@@ -31,7 +31,7 @@ const CircularAnimation = () => {
   const { width, height } = useWindowDimensions();
   
   // Calcul des dimensions dynamiques
-  const circleSize = Math.min(width * 0.4, height * 0.7);
+  const circleSize = Math.min(width * 0.6 , height * 0.8 );
   const circlePosition = {
     top: `${height * 0.15}px`,
     left: `${(width - circleSize) / 2}px`, // Centrer horizontalement
@@ -49,10 +49,10 @@ const CircularAnimation = () => {
   const circleRadius = circleDiameter / 2;
 
   // Rayon pour positionner les chiffres
-  const totalRadius = circleRadius + config.fixedDistance;
+  const totalRadius = circleRadius + config.fixedDistance - 10;
  
   return (
-    <div ref={containerRef} className="absolute -left-[50%] w-screen h-screen mx-auto ">
+    <div ref={containerRef} className="absolute -left-[50%] -top-[50%] w-screen h-screen mx-auto ">
       {/* Cercle central avec dimensions dynamiques */}
       <div
         className="absolute border border-secondary rounded-full border-dashed"
@@ -81,8 +81,8 @@ const CircularAnimation = () => {
           className="absolute z-10"
           style={{
             transformOrigin: "center",
-            width: "100%",
-            height: "100%",
+            width: "calc(100%)",
+            height: "calc(100%)",
             top: 0,
             left: 0,
           }}
@@ -110,8 +110,8 @@ const CircularAnimation = () => {
                 <div
                   style={{
                     position: "absolute",
-                    top: "50%",
-                    left: "50%",
+                    top: "60%",
+                    left: "60%",
                     width: `${config.pointSize}px`,
                     height: `${config.pointSize}px`,
                     backgroundColor: "white",
@@ -122,7 +122,7 @@ const CircularAnimation = () => {
 
                 {/* Chiffre */}
                 <div
-                  className="text-secondary font-normal text-8xl font-Monument"
+                  className="text-secondary font-normal text-7xl font-Monument"
                   style={{
                     position: "absolute",
                     left: `${config.spacing + 5}px`,
