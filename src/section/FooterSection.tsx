@@ -1,9 +1,9 @@
 function FooterSection() {
   return (
-    <div className="w-full h-[30vh] relative flex flex-col text-gray font-Akkordeon  z-20">
+    <div className="w-full h-[50vh] relative flex flex-col text-gray font-Akkordeon  z-20">
       <div className="flex justify-between flex-row mx-[1vw] pt-[2.5vh] mt-[15vh]  font-montreal bottom-0">
         <div className="flex text-[1.5vw] gap-[2vw]">
-          <div className="">ACCEUIL </div>
+          <div className="">ACCUEIL </div>
           <div className="">PRESENTATION </div>
         </div>
 
@@ -19,6 +19,8 @@ function FooterSection() {
         <div className="">HUBLOT</div>
       </div>
     </div>
+
+
   );
 }
 

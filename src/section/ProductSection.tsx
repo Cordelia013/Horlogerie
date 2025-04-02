@@ -8,6 +8,7 @@ function ProductSection() {
     >
       <CircularAnimation />
        <div className="w-full flex justify-center item-center flex-col relative left-[50%] ">
+        
         <h3 className="text-[15vh]  ">Header</h3>
         <p className="text-base w-5/12  font-montrea ">
           Lorem ipsum dolor sit amet consectetur. Mauris ipsum ut velit egestas

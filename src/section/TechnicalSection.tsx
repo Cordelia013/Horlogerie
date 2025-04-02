@@ -1,5 +1,6 @@
 import { useState } from "react";
-import Carousel from "./../components/Carousel";
+import FAQAccordion from "../components/Carousel";
+// import Carousel from "./../components/Carousel";
 
 // Liste des images du carrousel
 const images = [
@@ -16,11 +17,12 @@ function TechnicalSection() {
 
   return (
     <div
-      className="relative w-screen h-[100vh] bg-primary flex "
+      className="relative w-full h-full bg-primary flex "
       id="technical-section  "
     >
+
       {/* Zone gauche : Image sélectionnée */}
-      <div className="zoneLeft w-6/12 h-[100vh]  flex items-center justify-center">
+      <div className="zoneLeft w-[50vw] h-[100%]  flex items-center justify-center">
         <img
           src={selectedImage}
           alt="Selected Watch"
@@ -29,9 +31,9 @@ function TechnicalSection() {
       </div>
 
       {/* Zone droite : Carrousel */} 
-      <div className="zoneRight w-6/12 bg-secondary flex flex-row justify-center items-end gap-2 px-7 z-10 2xl:h-fill">
-        <Carousel />
-
+      <div className="zoneRight w-[50vw] bg-secondary flex flex-row justify-center items-end gap-2 px-7 z-10 2xl:h-fill">
+        {/* <Carousel /> */}
+        <FAQAccordion />
         {images.map((img, index) => (
           <img
             key={index}

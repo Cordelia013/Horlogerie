@@ -10,7 +10,7 @@ import FooterSection from "./section/FooterSection";
 function App() {
   return (
     <>
-      <div className="overflow-hidden">
+      <div className="w-screen h-screen ">
          
           <HeroSection />
           <PresentationSection />
