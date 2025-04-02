@@ -2,62 +2,80 @@ import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 
 const CircularAnimation = () => {
-  const [_dimensions, setDimensions] = useState({
-    width: window.innerWidth,
-    height: window.innerHeight
-  });
   const containerRef = useRef(null);
-
   const numbers = Array.from({ length: 9 }, (_, i) =>
     i.toString().padStart(1, "0")
   );
 
-  useEffect(() => {
-    const handleResize = () => {
-      setDimensions({
-        width: window.innerWidth,
-        height: window.innerHeight
-      });
-    };
+  // Hook personnalisé pour les dimensions de la fenêtre
+  const useWindowDimensions = () => {
+    const [dimensions, setDimensions] = useState({
+      width: window.innerWidth,
+      height: window.innerHeight,
+    });
 
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+    useEffect(() => {
+      const handleResize = () => {
+        setDimensions({
+          width: window.innerWidth,
+          height: window.innerHeight,
+        });
+      };
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }, []);
 
-  // 🔧 Personnalisation facile
+    return dimensions;
+  };
+
+  const { width, height } = useWindowDimensions();
+  
+  // Calcul des dimensions dynamiques
+  const circleSize = Math.min(width * 0.4, height * 0.7);
+  const circlePosition = {
+    top: `${height * 0.15}px`,
+    left: `${(width - circleSize) / 2}px`, // Centrer horizontalement
+  };
+
+  // Configuration
   const config = {
     fixedDistance: 10,
     spacing: 30,
     pointSize: 6,
-    rotationSpeed: 1,
   };
 
   // Calcul des dimensions du cercle
-  const circleDiameter = 530;
+  const circleDiameter = circleSize;
   const circleRadius = circleDiameter / 2;
 
   // Rayon pour positionner les chiffres
   const totalRadius = circleRadius + config.fixedDistance;
  
   return (
-    <div ref={containerRef} className="flex justify-start items-center w-screen h-screen mx-auto">
-      {/* Cercle central */}
+    <div ref={containerRef} className="absolute -left-[50%] w-screen h-screen mx-auto ">
+      {/* Cercle central avec dimensions dynamiques */}
       <div
-        className="absolute w-[550px] h-[550px] top-[205px] -left-64 border border-secondary rounded-full border-dashed"
+        className="absolute border border-secondary rounded-full border-dashed"
+        style={{
+          width: `${circleSize}px`,
+          height: `${circleSize}px`,
+          top: circlePosition.top,
+          left: circlePosition.left,
+        }}
       > 
         {/* Conteneur tournant */}
         <motion.div
           animate={{
-            rotate: [0, 360],
+            rotate: 360
           }}
           transition={{
             repeat: Infinity,
             duration: 60,
             ease: (t) => {
+              // Crée 60 pas discrets avec un léger rebond
               const step = Math.floor(t * 60) / 60;
               return step + Math.sin(step * Math.PI * 2) * 0.005;
             },
-            times: [0, 1],
             repeatType: "loop",
           }}
           className="absolute z-10"
